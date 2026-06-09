@@ -1,0 +1,19 @@
+def reconcile_claim(claim_data, policy_rules):
+    print("[Reconciliation Agent] Reconciling claim against policy...")
+
+    response = f'''
+Claim Analysis Summary
+----------------------
+
+Customer ID: {claim_data["customer_id"]}
+Incident Type: {claim_data["incident_type"]}
+Claim Amount: £{claim_data["claim_amount"]}
+
+Relevant Policy Rules:
+{policy_rules}
+
+Result:
+Claim requires additional review due to policy thresholds.
+'''
+
+    return response
